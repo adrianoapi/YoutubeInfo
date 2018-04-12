@@ -8,25 +8,34 @@ class YoutubeInfo {
     
     public function __construct($url = NULL)
     {
-        $this->url = $url;
-        $this->token = $this->setToken();
+        $this->setUrl($url);
+        $this->setToken();
     }
     
-    public function setUrl($url = NULL)
-    {
-        $this->url = $url;
-    }
-    
-    /* Get Thumb video youtube */
     public function getThumb()
     {
         return 'https://i.ytimg.com/vi/'. $this->token .'/hqdefault.jpg';
     }
     
-    public function setToken()
+    public function getUrl()
+    {
+        return $this->url;
+    }
+    
+    private function setUrl($url)
+    {
+        $this->url = $url;
+    }
+    
+    public function getToken()
+    {
+        return $this->token;
+    }
+    
+    private function setToken()
     {
         $array = explode("=", $this->url);
-        return $array[1];
+        $this->token = $array[1];
     }
     
 }
