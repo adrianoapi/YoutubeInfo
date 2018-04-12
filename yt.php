@@ -12,9 +12,11 @@ class YoutubeInfo {
         $this->setToken();
     }
     
-    public function getThumb()
+    public function getThumb($size = "big")
     {
-        return 'https://i.ytimg.com/vi/'. $this->token .'/hqdefault.jpg';
+        return $size == "big" ?
+                'https://i.ytimg.com/vi/'  . $this->token .'/hqdefault.jpg' :
+                'https://i1.ytimg.com/vi/' . $this->token . '/default.jpg ';
     }
     
     public function getUrl()
@@ -43,4 +45,6 @@ class YoutubeInfo {
 # IMPLEMENTAR
 $obj = new YoutubeInfo("https://www.youtube.com/watch?v=VHxjyBtKxpM");
 echo "<img src=\"{$obj->getThumb()}\">";
+echo "<img src=\"{$obj->getThumb('small')}\">";
+
 ?>
