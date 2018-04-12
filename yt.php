@@ -1,5 +1,14 @@
 <?php
-/* Get Thumb video youtube */
 
+
+class YoutubeInfo {
+    
+    /* Get Thumb video youtube */
+    public function getThumb()
+    {
+        
+    }
+    
+}
 
 ?>
