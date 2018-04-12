@@ -4,9 +4,9 @@
 
     $obj = new YoutubeInfo("https://www.youtube.com/watch?v=VHxjyBtKxpM");
 
-    $obj->getThumb()        # https://i.ytimg.com/vi/VHxjyBtKxpM/hqdefault.jpg
+    $obj->getThumb()
 
-    $obj->getThumb('small') # https://i1.ytimg.com/vi/VHxjyBtKxpM/default.jpg 
+    $obj->getThumb('small')
 
 ![alt text](https://i.ytimg.com/vi/VHxjyBtKxpM/hqdefault.jpg)
 ![alt text](https://i1.ytimg.com/vi/VHxjyBtKxpM/default.jpg )
