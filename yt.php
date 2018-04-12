@@ -78,6 +78,7 @@ class YoutubeInfo {
 # IMPLEMENT
 $obj = new YoutubeInfo("https://www.youtube.com/watch?v=VHxjyBtKxpM");
 echo "<img src=\"{$obj->getThumb()}\">";
+echo "&nbsp;";
 echo "<img src=\"{$obj->getThumb('small')}\">";
 
 # INFORMATION

@@ -3,7 +3,11 @@
 ## Implementando
 
 ![alt text](https://i.ytimg.com/vi/VHxjyBtKxpM/hqdefault.jpg)
+![alt text](https://i1.ytimg.com/vi/VHxjyBtKxpM/default.jpg )
 
+$obj = new YoutubeInfo("https://www.youtube.com/watch?v=VHxjyBtKxpM");
+$obj->getThumb()        # https://i.ytimg.com/vi/VHxjyBtKxpM/hqdefault.jpg
+$obj->getThumb('small') # https://i1.ytimg.com/vi/VHxjyBtKxpM/default.jpg 
 
  print_r($obj->getInfo());
 ```html
