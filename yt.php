@@ -1,6 +1,6 @@
 <?php
 
-
+#https://www.youtube.com/watch?v=VHxjyBtKxpM
 class YoutubeInfo {
     
     private $url;
@@ -8,8 +8,18 @@ class YoutubeInfo {
     
     public function __construct($url = NULL)
     {
-        $this->setUrl($url);
-        $this->setToken();
+        
+        if(!$url){
+            throw new Exception('Set a video address');
+        }
+        
+        try {
+            $this->setUrl($url);
+            $this->setToken();
+        } catch (Exception $e) {
+            echo 'Erro: ',  $e->getMessage(), "\n";
+        }
+        
     }
     
     public function getThumb($size = "big")
